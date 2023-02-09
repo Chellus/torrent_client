@@ -47,7 +47,7 @@ class Encoder:
         result = bytearray('d', 'utf-8')
         for k, v in data.items():
             key = self.encode_next(k)
-            value = self.encode_next(value)
+            value = self.encode_next(v)
             if key and value:
                 result += key
                 result += value
